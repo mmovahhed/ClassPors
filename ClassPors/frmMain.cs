@@ -1,8 +1,5 @@
 ﻿using ClassPors.Tables;
 using System;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ClassPors
@@ -12,22 +9,27 @@ namespace ClassPors
         public frmMain()
         {
             InitializeComponent();
+            LoadControls();
         }
-        private void btnExit_Click(object sender, EventArgs e)
+
+        private void LoadControls()
         {
-            Application.Exit();
+            lblCaption.Text = CPorsControl.Title;
+            btnGood.Text = CPorsControl.Btn1;
+            btnNorm.Text = CPorsControl.Btn2;
+            btnBad.Text = CPorsControl.Btn3;
+
+            ToolTip toolTip1 = new ToolTip();
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 500;
+            toolTip1.ReshowDelay = 500;
+            toolTip1.ShowAlways = true;
+
+            toolTip1.SetToolTip(this.btnGood, "از عدد 1 در صفحه کلید هم می توانید استفاده کنید");
+            toolTip1.SetToolTip(this.btnNorm, "از عدد 2 در صفحه کلید هم می توانید استفاده کنید");
+            toolTip1.SetToolTip(this.btnBad, "از عدد 3 در صفحه کلید هم می توانید استفاده کنید");
+
         }
-
-        private void btnGrid_Click(object sender, EventArgs e)
-        {
-            frmGrid fg = new frmGrid();
-            fg.ShowDialog();
-
-        }
-
-        static string path = Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath).ToString() + @"\\dbText.txt";
-        //CPors cPors = new CPors();
-
         private void btnGood_Click(object sender, EventArgs e)
         {
             CPors.Good++;
@@ -77,104 +79,21 @@ namespace ClassPors
             */
         }
 
-        private void btnReset_Click(object sender, EventArgs e)
+        private void frmMain_KeyUp(object sender, KeyEventArgs e)
         {
-            resetFile();
-            MessageBox.Show("نوسازی فایل با موفقیت انجام شد!");
-        }
-
-        static void lineChanger(string newText, string fileName, int line_to_edit)
-        {
-            string[] arrLine = File.ReadAllLines(fileName);
-            arrLine[line_to_edit - 1] = newText;
-            File.WriteAllLines(fileName, arrLine);
-        }
-
-        bool saveInFile()
-        {
-            try
+            if (e.KeyCode == Keys.D1 || e.KeyCode == Keys.NumPad1)
             {
-                File.Create(path).Close();
-                StreamWriter sw = new StreamWriter(path, true, Encoding.ASCII);
-
-                sw.WriteLine("G=" + CPors.Good);
-                sw.WriteLine("N=" + CPors.Norm);
-                sw.WriteLine("B=" + CPors.Bad);
-                sw.WriteLine("T=" + CPors.Total);
-
-                //close the file
-                sw.Close();
-
-                MessageBox.Show("ذخیره سازی در فایل با موفقیت انجام شد!");
-                return true;
+                btnGood_Click(null, null);
             }
-            catch (Exception ex)
+            else
+            if (e.KeyCode == Keys.D2 || e.KeyCode == Keys.NumPad2)
             {
-                Console.WriteLine("Exception110: " + ex.Message);
-                return false;
+                btnNorm_Click(null, null);
             }
-
-
-        }
-
-        bool resetFile()
-        {
-            try
+            else
+            if (e.KeyCode == Keys.D3 || e.KeyCode == Keys.NumPad3)
             {
-
-                File.Create(path).Close();
-
-                StreamWriter sw = new StreamWriter(path, true, Encoding.ASCII);
-
-                sw.WriteLine("G=" + CPors.Good);
-                sw.WriteLine("N=" + CPors.Norm);
-                sw.WriteLine("B=" + CPors.Bad);
-                sw.WriteLine("T=" + CPors.Total);
-
-                //close the file
-                sw.Close();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception136: " + ex.Message);
-            }
-            finally
-            {
-                Console.WriteLine("Executing finally block.140");
-            }
-            return false;
-        }
-
-        private void btnLoadFile_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                CPors.Good = Convert.ToInt32(File.ReadLines(path).Skip(0).Take(1).First().Split('=')[1]);
-                CPors.Norm = Convert.ToInt32(File.ReadLines(path).Skip(1).Take(2).First().Split('=')[1]);
-                CPors.Bad = Convert.ToInt32(File.ReadLines(path).Skip(2).Take(3).First().Split('=')[1]);
-                CPors.Total = Convert.ToInt32(File.ReadLines(path).Skip(3).Take(4).First().Split('=')[1]);
-
-                MessageBox.Show("بارگیری فایل در برنامه با موفقیت انجام شد!");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("156: " + ex.ToString());
-            }
-        }
-
-        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("آیا تمایل دارید که این جلسه در فایل ذخیره شود؟", "ذخیره در فایل", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                if (saveInFile())
-                    Application.Exit();
-                else
-                    MessageBox.Show("خطا در ذخیره فایل");
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                Application.Exit();
+                btnBad_Click(null, null);
             }
         }
     }

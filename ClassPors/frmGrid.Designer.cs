@@ -63,17 +63,18 @@
             // 
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Top;
             legend1.Name = "Legend1";
             legend1.TitleFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(68, 12);
+            this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(534, 300);
+            this.chart1.Size = new System.Drawing.Size(669, 300);
             this.chart1.TabIndex = 12;
             this.chart1.Text = "chart1";
             // 
@@ -86,9 +87,11 @@
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.lblCaption);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGrid";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "آمار";
             this.Load += new System.EventHandler(this.frmGrid_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();

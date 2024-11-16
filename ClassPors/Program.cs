@@ -27,7 +27,7 @@ namespace ClassPors
             MessageBoxManager.Register();
 
             //Application.Run(new frmInput());
-            Application.Run(new frmMain());
+            Application.Run(new frmMainMDI());
         }
 
     }
