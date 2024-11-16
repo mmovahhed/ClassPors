@@ -27,7 +27,7 @@
     <MapFileExtensions>false</MapFileExtensions>
     <ProductName>وصال</ProductName>
     <ApplicationRevision>2</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -125,6 +125,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tables\CPorsControl.cs" />
     <Compile Include="Tables\CPors.cs" />
+    <Compile Include="Tables\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="frmGrid.resx">
       <DependentUpon>frmGrid.cs</DependentUpon>
     </EmbeddedResource>

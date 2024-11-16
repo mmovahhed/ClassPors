@@ -19,6 +19,8 @@ namespace ClassPors
             btnNorm.Text = CPorsControl.Btn2;
             btnBad.Text = CPorsControl.Btn3;
 
+            lblCount.Text = CPors.Total.ToString();
+
             ToolTip toolTip1 = new ToolTip();
             toolTip1.AutoPopDelay = 5000;
             toolTip1.InitialDelay = 500;
@@ -34,49 +36,19 @@ namespace ClassPors
         {
             CPors.Good++;
             CPors.Total++;
+            lblCount.Text = CPors.Total.ToString();
         }
         private void btnNorm_Click(object sender, EventArgs e)
         {
             CPors.Norm++;
             CPors.Total++;
-            //lineChanger("new content for this line", path, 10);
+            lblCount.Text = CPors.Total.ToString();
         }
         private void btnBad_Click(object sender, EventArgs e)
         {
             CPors.Bad++;
             CPors.Total++;
-            /*
-            String line;
-            try
-            {
-                //Pass the file path and file name to the StreamReader constructor
-                StreamReader sr = new StreamReader(path);
-                //Read the first line of text
-                line = sr.ReadLine();
-
-                string linex = File.ReadLines(path).Skip(9).Take(1).First();
-
-                //Continue to read until you reach end of file
-                while (line != null)
-                {
-                    //write the line to console window
-                    Console.WriteLine(line);
-                    //Read the next line
-                    line = sr.ReadLine();
-                }
-                //close the file
-                sr.Close();
-                Console.ReadLine();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception: " + ex.Message);
-            }
-            finally
-            {
-                Console.WriteLine("Executing finally block.");
-            }
-            */
+            lblCount.Text = CPors.Total.ToString();
         }
 
         private void frmMain_KeyUp(object sender, KeyEventArgs e)

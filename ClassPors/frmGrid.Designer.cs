@@ -1,4 +1,5 @@
-﻿namespace ClassPors
+﻿
+namespace ClassPors
 {
     partial class frmGrid
     {
@@ -40,22 +41,22 @@
             // lblCaption
             // 
             this.lblCaption.AutoSize = true;
-            this.lblCaption.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblCaption.Font = new System.Drawing.Font("B Titr", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblCaption.ForeColor = System.Drawing.Color.Red;
-            this.lblCaption.Location = new System.Drawing.Point(62, 342);
+            this.lblCaption.Location = new System.Drawing.Point(61, 342);
             this.lblCaption.Name = "lblCaption";
-            this.lblCaption.Size = new System.Drawing.Size(124, 33);
+            this.lblCaption.Size = new System.Drawing.Size(126, 56);
             this.lblCaption.TabIndex = 10;
             this.lblCaption.Text = "تعداد کل";
             // 
             // lblCount
             // 
             this.lblCount.AutoSize = true;
-            this.lblCount.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblCount.Font = new System.Drawing.Font("B Titr", 24F, System.Drawing.FontStyle.Bold);
             this.lblCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.lblCount.Location = new System.Drawing.Point(247, 342);
             this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(32, 33);
+            this.lblCount.Size = new System.Drawing.Size(38, 56);
             this.lblCount.TabIndex = 11;
             this.lblCount.Text = "0";
             // 
@@ -65,12 +66,12 @@
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Top;
             legend1.Name = "Legend1";
-            legend1.TitleFont = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.TitleFont = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
-            series1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.Font = new System.Drawing.Font("B Titr", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
@@ -80,13 +81,13 @@
             // 
             // frmGrid
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 423);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.lblCount);
             this.Controls.Add(this.lblCaption);
-            this.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.Font = new System.Drawing.Font("B Titr", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmGrid";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

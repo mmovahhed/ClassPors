@@ -23,11 +23,12 @@ namespace ClassPors
             {
                 chart1.Series.Clear();
                 chart1.Series.Add("Series1");
+                chart1.Series["Series1"].Font = new System.Drawing.Font("B Titr", 10f);
                 chart1.Series["Series1"].Points.AddXY("خوب", CPors.Good);
                 chart1.Series["Series1"].Points.AddXY("متوسط", CPors.Norm);
                 chart1.Series["Series1"].Points.AddXY("بد", CPors.Bad);
                 //chart title  
-                chart1.Titles.Add("آمار تفکیکی");
+                chart1.Titles.Add("آمار تفکیکی").Font = new System.Drawing.Font("B Titr", 16f);
             }
             catch (Exception ex)
             {
@@ -35,5 +36,6 @@ namespace ClassPors
             }
 
         }
+
     }
 }

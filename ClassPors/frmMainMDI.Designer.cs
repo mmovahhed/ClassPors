@@ -47,6 +47,7 @@ namespace ClassPors
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("B Titr", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.منویاصلیToolStripMenuItem,
             this.نظرسنجیToolStripMenuItem,
@@ -54,7 +55,7 @@ namespace ClassPors
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 29);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,27 +66,27 @@ namespace ClassPors
             this.menuResetFile,
             this.menuExit});
             this.منویاصلیToolStripMenuItem.Name = "منویاصلیToolStripMenuItem";
-            this.منویاصلیToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.منویاصلیToolStripMenuItem.Size = new System.Drawing.Size(69, 25);
             this.منویاصلیToolStripMenuItem.Text = "منوی اصلی";
             // 
             // menuLoadFile
             // 
             this.menuLoadFile.Name = "menuLoadFile";
-            this.menuLoadFile.Size = new System.Drawing.Size(190, 22);
+            this.menuLoadFile.Size = new System.Drawing.Size(191, 26);
             this.menuLoadFile.Text = "بارگیری فایل ذخیره شده";
             this.menuLoadFile.Click += new System.EventHandler(this.menuLoadFile_Click);
             // 
             // menuResetFile
             // 
             this.menuResetFile.Name = "menuResetFile";
-            this.menuResetFile.Size = new System.Drawing.Size(190, 22);
+            this.menuResetFile.Size = new System.Drawing.Size(191, 26);
             this.menuResetFile.Text = "پاک کردن فایل (نوسازی)";
             this.menuResetFile.Click += new System.EventHandler(this.menuResetFile_Click);
             // 
             // menuExit
             // 
             this.menuExit.Name = "menuExit";
-            this.menuExit.Size = new System.Drawing.Size(190, 22);
+            this.menuExit.Size = new System.Drawing.Size(191, 26);
             this.menuExit.Text = "خروج";
             this.menuExit.Click += new System.EventHandler(this.menuExit_Click);
             // 
@@ -95,20 +96,20 @@ namespace ClassPors
             this.menuPoll,
             this.menuShowPoll});
             this.نظرسنجیToolStripMenuItem.Name = "نظرسنجیToolStripMenuItem";
-            this.نظرسنجیToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.نظرسنجیToolStripMenuItem.Size = new System.Drawing.Size(64, 25);
             this.نظرسنجیToolStripMenuItem.Text = "نظرسنجی";
             // 
             // menuPoll
             // 
             this.menuPoll.Name = "menuPoll";
-            this.menuPoll.Size = new System.Drawing.Size(180, 22);
+            this.menuPoll.Size = new System.Drawing.Size(180, 26);
             this.menuPoll.Text = "اجرا";
             this.menuPoll.Click += new System.EventHandler(this.menuPoll_Click);
             // 
             // menuShowPoll
             // 
             this.menuShowPoll.Name = "menuShowPoll";
-            this.menuShowPoll.Size = new System.Drawing.Size(180, 22);
+            this.menuShowPoll.Size = new System.Drawing.Size(180, 26);
             this.menuShowPoll.Text = "مشاهده آمار";
             this.menuShowPoll.Click += new System.EventHandler(this.menuShowPoll_Click);
             // 
@@ -120,34 +121,34 @@ namespace ClassPors
             this.menuEditBtn2,
             this.menuEditBtn3});
             this.ویرایشToolStripMenuItem.Name = "ویرایشToolStripMenuItem";
-            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(54, 25);
             this.ویرایشToolStripMenuItem.Text = "ویرایش";
             // 
             // menuEditPollTitle
             // 
             this.menuEditPollTitle.Name = "menuEditPollTitle";
-            this.menuEditPollTitle.Size = new System.Drawing.Size(203, 22);
+            this.menuEditPollTitle.Size = new System.Drawing.Size(190, 26);
             this.menuEditPollTitle.Text = "ویرایش موضوع نظرسنجی";
             this.menuEditPollTitle.Click += new System.EventHandler(this.menuEditPollTitle_Click);
             // 
             // menuEditBtn1
             // 
             this.menuEditBtn1.Name = "menuEditBtn1";
-            this.menuEditBtn1.Size = new System.Drawing.Size(203, 22);
+            this.menuEditBtn1.Size = new System.Drawing.Size(190, 26);
             this.menuEditBtn1.Text = "ویرایش عنوان کلید 1";
             this.menuEditBtn1.Click += new System.EventHandler(this.menuEditBtn1_Click);
             // 
             // menuEditBtn2
             // 
             this.menuEditBtn2.Name = "menuEditBtn2";
-            this.menuEditBtn2.Size = new System.Drawing.Size(203, 22);
+            this.menuEditBtn2.Size = new System.Drawing.Size(190, 26);
             this.menuEditBtn2.Text = "ویرایش عنوان کلید 2";
             this.menuEditBtn2.Click += new System.EventHandler(this.menuEditBtn2_Click);
             // 
             // menuEditBtn3
             // 
             this.menuEditBtn3.Name = "menuEditBtn3";
-            this.menuEditBtn3.Size = new System.Drawing.Size(203, 22);
+            this.menuEditBtn3.Size = new System.Drawing.Size(190, 26);
             this.menuEditBtn3.Text = "ویرایش عنوان کلید 3";
             this.menuEditBtn3.Click += new System.EventHandler(this.menuEditBtn3_Click);
             // 

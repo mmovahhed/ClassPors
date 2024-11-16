@@ -97,10 +97,41 @@ namespace ClassPors
 
         private void menuResetFile_Click(object sender, EventArgs e)
         {
-            if (resetFile())
-                MessageBox.Show("نوسازی فایل با موفقیت انجام شد!");
-            else
-                MessageBox.Show("نوسازی فایل با خطا مواجه شد! لطفا دوباره تلاش کنید!");
+            DialogResult dialogResult = MessageBox.Show("آیا از پاک کردن فایل آماری ذخیره شده اطمینان دارید؟", "پاک کردن فایل آمار", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (resetFile())
+                {
+                    MessageBox.Show("نوسازی فایل با موفقیت انجام شد!");
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        if (form.Name == "frmMain")
+                        {
+                            form.Visible = false;
+                            form.Dispose();
+                            frmMain _frmMain = new frmMain();
+                            _frmMain.MdiParent = this;
+                            _frmMain.Dock = DockStyle.Fill;
+                            _frmMain.Show();
+                            break;
+                        }
+                        if (form.Name == "frmGrid")
+                        {
+                            form.Visible = false;
+                            form.Dispose();
+                            frmGrid _frmGrid = new frmGrid();
+                            _frmGrid.MdiParent = this;
+                            _frmGrid.Dock = DockStyle.Fill;
+                            _frmGrid.Show();
+                            break;
+                        }
+                    }
+                }
+                else
+                    MessageBox.Show("نوسازی فایل با خطا مواجه شد! لطفا دوباره تلاش کنید!");
+            }
+
+
         }
 
         bool resetFile()
@@ -112,10 +143,10 @@ namespace ClassPors
 
                 StreamWriter sw = new StreamWriter(path, true, Encoding.ASCII);
 
-                sw.WriteLine("G=" + CPors.Good);
-                sw.WriteLine("N=" + CPors.Norm);
-                sw.WriteLine("B=" + CPors.Bad);
-                sw.WriteLine("T=" + CPors.Total);
+                sw.WriteLine("G=" + (CPors.Good = 0));
+                sw.WriteLine("N=" + (CPors.Norm = 0));
+                sw.WriteLine("B=" + (CPors.Bad = 0));
+                sw.WriteLine("T=" + (CPors.Total = 0));
 
                 //close the file
                 sw.Close();
@@ -149,6 +180,30 @@ namespace ClassPors
                 CPors.Total = Convert.ToInt32(File.ReadLines(path).Skip(3).Take(4).First().Split('=')[1]);
 
                 MessageBox.Show("بارگیری فایل در برنامه با موفقیت انجام شد!");
+                foreach (Form form in Application.OpenForms)
+                {
+                    if (form.Name == "frmMain")
+                    {
+                        form.Visible = false;
+                        form.Dispose();
+                        frmMain _frmMain = new frmMain();
+                        _frmMain.MdiParent = this;
+                        _frmMain.Dock = DockStyle.Fill;
+                        _frmMain.Show();
+                        break;
+                    }
+                    if (form.Name == "frmGrid")
+                    {
+                        form.Visible = false;
+                        form.Dispose();
+                        frmGrid _frmGrid = new frmGrid();
+                        _frmGrid.MdiParent = this;
+                        _frmGrid.Dock = DockStyle.Fill;
+                        _frmGrid.Show();
+                        break;
+                    }
+
+                }
             }
             catch (Exception ex)
             {
@@ -291,10 +346,10 @@ namespace ClassPors
 
         private static DialogResult ShowInputDialog(ref string input)
         {
-            System.Drawing.Size size = new System.Drawing.Size(200, 70);
+            System.Drawing.Size size = new System.Drawing.Size(200, 80);
             Form inputBox = new Form();
-            System.Drawing.Size _newSize = new System.Drawing.Size(75, 25);
-            System.Drawing.Font _newFont = new System.Drawing.Font("Tahoma", 10f);
+            System.Drawing.Size _newSize = new System.Drawing.Size(75, 30);
+            System.Drawing.Font _newFont = new System.Drawing.Font("B Titr", 10f);
 
             inputBox.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             inputBox.ClientSize = size;
