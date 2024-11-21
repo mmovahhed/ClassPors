@@ -272,8 +272,7 @@ namespace ClassPors
                     case 0:
                         {
                             string input = CPorsControl.Title;
-                            ShowInputDialog(ref input);
-                            if (CPorsControl.Title.Trim() != input.Trim())
+                            if (ShowInputDialog(ref input) == DialogResult.OK && CPorsControl.Title.Trim() != input.Trim())
                             {
                                 lineChanger("Title=" + input.Trim(), pathControls, cntrl + 1);
                                 CPorsControl.Title = input;
@@ -284,8 +283,7 @@ namespace ClassPors
                     case 1:
                         {
                             string input = CPorsControl.Btn1;
-                            ShowInputDialog(ref input);
-                            if (CPorsControl.Btn1.Trim() != input.Trim())
+                            if (ShowInputDialog(ref input) == DialogResult.OK && CPorsControl.Btn1.Trim() != input.Trim())
                             {
                                 lineChanger("Btn1=" + input.Trim(), pathControls, cntrl + 1);
                                 CPorsControl.Btn1 = input;
@@ -296,8 +294,7 @@ namespace ClassPors
                     case 2:
                         {
                             string input = CPorsControl.Btn2;
-                            ShowInputDialog(ref input);
-                            if (CPorsControl.Btn2.Trim() != input.Trim())
+                            if (ShowInputDialog(ref input) == DialogResult.OK && CPorsControl.Btn2.Trim() != input.Trim())
                             {
                                 lineChanger("Btn2=" + input.Trim(), pathControls, cntrl + 1);
                                 CPorsControl.Btn2 = input;
@@ -308,8 +305,7 @@ namespace ClassPors
                     case 3:
                         {
                             string input = CPorsControl.Btn3;
-                            ShowInputDialog(ref input);
-                            if (CPorsControl.Btn3.Trim() != input.Trim())
+                            if (ShowInputDialog(ref input) == DialogResult.OK && CPorsControl.Btn3.Trim() != input.Trim())
                             {
                                 lineChanger("Btn3=" + input.Trim(), pathControls, cntrl + 1);
                                 CPorsControl.Btn3 = input;
