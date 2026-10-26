@@ -18,6 +18,7 @@ namespace ClassPors
             btnGood.Text = CPorsControl.Btn1;
             btnNorm.Text = CPorsControl.Btn2;
             btnBad.Text = CPorsControl.Btn3;
+            btnVBad.Text = CPorsControl.Btn4;
 
             lblCount.Text = CPors.Total.ToString();
 
@@ -30,6 +31,7 @@ namespace ClassPors
             toolTip1.SetToolTip(this.btnGood, "از عدد 1 در صفحه کلید هم می توانید استفاده کنید");
             toolTip1.SetToolTip(this.btnNorm, "از عدد 2 در صفحه کلید هم می توانید استفاده کنید");
             toolTip1.SetToolTip(this.btnBad, "از عدد 3 در صفحه کلید هم می توانید استفاده کنید");
+            toolTip1.SetToolTip(this.btnVBad, "از عدد 4 در صفحه کلید هم می توانید استفاده کنید");
 
         }
         private void btnGood_Click(object sender, EventArgs e)
@@ -51,6 +53,13 @@ namespace ClassPors
             lblCount.Text = CPors.Total.ToString();
         }
 
+        private void btnVBad_Click(object sender, EventArgs e)
+        {
+            CPors.VeryBad++;
+            CPors.Total++;
+            lblCount.Text = CPors.Total.ToString();
+        }
+
         private void frmMain_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.D1 || e.KeyCode == Keys.NumPad1)
@@ -66,6 +75,11 @@ namespace ClassPors
             if (e.KeyCode == Keys.D3 || e.KeyCode == Keys.NumPad3)
             {
                 btnBad_Click(null, null);
+            }
+            else
+            if (e.KeyCode == Keys.D4 || e.KeyCode == Keys.NumPad4)
+            {
+                btnVBad_Click(null, null);
             }
         }
     }

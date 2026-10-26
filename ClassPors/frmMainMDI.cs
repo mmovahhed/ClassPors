@@ -34,6 +34,9 @@ namespace ClassPors
                 str = File.ReadLines(pathControls).Skip(3).Take(4).First();
                 CPorsControl.Btn3 = str.Split(new[] { "Btn3=" }, StringSplitOptions.None)[1];
 
+                str = File.ReadLines(pathControls).Skip(4).Take(5).First();
+                CPorsControl.Btn4 = str.Split(new[] { "Btn4=" }, StringSplitOptions.None)[1];
+
             }
             catch (Exception ex)
             {
@@ -78,6 +81,7 @@ namespace ClassPors
                 sw.WriteLine("G=" + CPors.Good);
                 sw.WriteLine("N=" + CPors.Norm);
                 sw.WriteLine("B=" + CPors.Bad);
+                sw.WriteLine("VB=" + CPors.VeryBad);
                 sw.WriteLine("T=" + CPors.Total);
 
                 //close the file
@@ -146,6 +150,7 @@ namespace ClassPors
                 sw.WriteLine("G=" + (CPors.Good = 0));
                 sw.WriteLine("N=" + (CPors.Norm = 0));
                 sw.WriteLine("B=" + (CPors.Bad = 0));
+                sw.WriteLine("VB=" + (CPors.VeryBad = 0));
                 sw.WriteLine("T=" + (CPors.Total = 0));
 
                 //close the file
@@ -177,7 +182,8 @@ namespace ClassPors
                 CPors.Good = Convert.ToInt32(File.ReadLines(path).Skip(0).Take(1).First().Split('=')[1]);
                 CPors.Norm = Convert.ToInt32(File.ReadLines(path).Skip(1).Take(2).First().Split('=')[1]);
                 CPors.Bad = Convert.ToInt32(File.ReadLines(path).Skip(2).Take(3).First().Split('=')[1]);
-                CPors.Total = Convert.ToInt32(File.ReadLines(path).Skip(3).Take(4).First().Split('=')[1]);
+                CPors.VeryBad = Convert.ToInt32(File.ReadLines(path).Skip(3).Take(4).First().Split('=')[1]);
+                CPors.Total = Convert.ToInt32(File.ReadLines(path).Skip(4).Take(5).First().Split('=')[1]);
 
                 MessageBox.Show("بارگیری فایل در برنامه با موفقیت انجام شد!");
                 foreach (Form form in Application.OpenForms)
@@ -313,6 +319,17 @@ namespace ClassPors
                             }
                             break;
                         }
+                    case 4:
+                        {
+                            string input = CPorsControl.Btn4;
+                            if (ShowInputDialog(ref input) == DialogResult.OK && CPorsControl.Btn4.Trim() != input.Trim())
+                            {
+                                lineChanger("Btn4=" + input.Trim(), pathControls, cntrl + 1);
+                                CPorsControl.Btn4 = input;
+                                editFlag = true;
+                            }
+                            break;
+                        }
                     default:
                         break;
                 }
@@ -384,6 +401,11 @@ namespace ClassPors
             DialogResult result = inputBox.ShowDialog();
             input = textBox.Text;
             return result;
+        }
+
+        private void menuEditBtn4_Click(object sender, EventArgs e)
+        {
+            editContols(4);
         }
     }
 }

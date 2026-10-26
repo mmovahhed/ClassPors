@@ -42,6 +42,7 @@ namespace ClassPors
             this.menuEditBtn1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuEditBtn2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuEditBtn3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuEditBtn4 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,14 +103,14 @@ namespace ClassPors
             // menuPoll
             // 
             this.menuPoll.Name = "menuPoll";
-            this.menuPoll.Size = new System.Drawing.Size(180, 26);
+            this.menuPoll.Size = new System.Drawing.Size(136, 26);
             this.menuPoll.Text = "اجرا";
             this.menuPoll.Click += new System.EventHandler(this.menuPoll_Click);
             // 
             // menuShowPoll
             // 
             this.menuShowPoll.Name = "menuShowPoll";
-            this.menuShowPoll.Size = new System.Drawing.Size(180, 26);
+            this.menuShowPoll.Size = new System.Drawing.Size(136, 26);
             this.menuShowPoll.Text = "مشاهده آمار";
             this.menuShowPoll.Click += new System.EventHandler(this.menuShowPoll_Click);
             // 
@@ -119,7 +120,8 @@ namespace ClassPors
             this.menuEditPollTitle,
             this.menuEditBtn1,
             this.menuEditBtn2,
-            this.menuEditBtn3});
+            this.menuEditBtn3,
+            this.menuEditBtn4});
             this.ویرایشToolStripMenuItem.Name = "ویرایشToolStripMenuItem";
             this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(54, 25);
             this.ویرایشToolStripMenuItem.Text = "ویرایش";
@@ -151,6 +153,13 @@ namespace ClassPors
             this.menuEditBtn3.Size = new System.Drawing.Size(190, 26);
             this.menuEditBtn3.Text = "ویرایش عنوان کلید 3";
             this.menuEditBtn3.Click += new System.EventHandler(this.menuEditBtn3_Click);
+            // 
+            // menuEditBtn4
+            // 
+            this.menuEditBtn4.Name = "menuEditBtn4";
+            this.menuEditBtn4.Size = new System.Drawing.Size(190, 26);
+            this.menuEditBtn4.Text = "ویرایش عنوان کلید 4";
+            this.menuEditBtn4.Click += new System.EventHandler(this.menuEditBtn4_Click);
             // 
             // frmMainMDI
             // 
@@ -186,5 +195,6 @@ namespace ClassPors
         private System.Windows.Forms.ToolStripMenuItem menuEditBtn1;
         private System.Windows.Forms.ToolStripMenuItem menuEditBtn2;
         private System.Windows.Forms.ToolStripMenuItem menuEditBtn3;
+        private System.Windows.Forms.ToolStripMenuItem menuEditBtn4;
     }
 }

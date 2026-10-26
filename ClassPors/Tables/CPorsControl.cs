@@ -6,6 +6,6 @@
         public static string Btn1 = "";
         public static string Btn2 = "";
         public static string Btn3 = "";
-
+        public static string Btn4 = "";
     }
 }

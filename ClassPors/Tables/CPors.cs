@@ -5,6 +5,7 @@
         public static int Total = 0;
         public static int Good = 0;
         public static int Bad = 0;
+        public static int VeryBad = 0;
         public static int Norm = 0;
 
     }
