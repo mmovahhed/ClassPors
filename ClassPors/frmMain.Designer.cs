@@ -41,14 +41,12 @@
             // 
             // lblCaption
             // 
-            this.lblCaption.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblCaption.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.lblCaption, 3);
-            this.lblCaption.Font = new System.Drawing.Font("B Titr", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblCaption.ForeColor = System.Drawing.Color.Red;
-            this.lblCaption.Location = new System.Drawing.Point(366, 112);
+            this.lblCaption.AutoSize = false;
+            this.tableLayoutPanel1.SetColumnSpan(this.lblCaption, 4);
+            this.lblCaption.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblCaption.Font = new System.Drawing.Font("B Titr", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblCaption.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.lblCaption.Name = "lblCaption";
-            this.lblCaption.Size = new System.Drawing.Size(492, 47);
             this.lblCaption.TabIndex = 14;
             this.lblCaption.Text = "لطفا نظر خود را از بین گزینه های زیر انتخاب کنید";
             this.lblCaption.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,87 +58,78 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.btnNorm, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnGood, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnBad, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.btnVBad, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblCount, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lblCaption, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblCaption, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnGood, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnNorm, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnBad, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnVBad, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblCount, 2, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(16);
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(978, 450);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
             // lblCount
             // 
+            this.lblCount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCount.AutoSize = true;
-            this.lblCount.Font = new System.Drawing.Font("B Titr", 24F, System.Drawing.FontStyle.Bold);
+            this.lblCount.Font = new System.Drawing.Font("B Titr", 32F, System.Drawing.FontStyle.Bold);
             this.lblCount.ForeColor = System.Drawing.Color.Blue;
-            this.lblCount.Location = new System.Drawing.Point(449, 336);
             this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(38, 56);
             this.lblCount.TabIndex = 16;
             this.lblCount.Text = "0";
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("B Titr", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(793, 336);
+            this.label1.Font = new System.Drawing.Font("B Titr", 32F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 56);
             this.label1.TabIndex = 15;
             this.label1.Text = "تعداد کل";
             // 
-            // btnNorm
-            // 
-            this.btnNorm.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnNorm.BackColor = System.Drawing.Color.Blue;
-            this.btnNorm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNorm.Font = new System.Drawing.Font("B Titr", 30F, System.Drawing.FontStyle.Bold);
-            this.btnNorm.ForeColor = System.Drawing.Color.White;
-            this.btnNorm.Location = new System.Drawing.Point(498, 227);
-            this.btnNorm.Name = "btnNorm";
-            this.btnNorm.Size = new System.Drawing.Size(228, 92);
-            this.btnNorm.TabIndex = 2;
-            this.btnNorm.Text = "متوسط";
-            this.btnNorm.UseVisualStyleBackColor = false;
-            this.btnNorm.Click += new System.EventHandler(this.btnNorm_Click);
-            // 
             // btnGood
             // 
-            this.btnGood.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnGood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
+            this.btnGood.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnGood.Font = new System.Drawing.Font("B Titr", 30F, System.Drawing.FontStyle.Bold);
             this.btnGood.ForeColor = System.Drawing.Color.White;
-            this.btnGood.Location = new System.Drawing.Point(748, 227);
+            this.btnGood.Margin = new System.Windows.Forms.Padding(8);
             this.btnGood.Name = "btnGood";
-            this.btnGood.Size = new System.Drawing.Size(217, 92);
             this.btnGood.TabIndex = 1;
             this.btnGood.Text = "خوب";
             this.btnGood.UseVisualStyleBackColor = false;
             this.btnGood.Click += new System.EventHandler(this.btnGood_Click);
             // 
+            // btnNorm
+            // 
+            this.btnNorm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.btnNorm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNorm.Font = new System.Drawing.Font("B Titr", 30F, System.Drawing.FontStyle.Bold);
+            this.btnNorm.ForeColor = System.Drawing.Color.White;
+            this.btnNorm.Margin = new System.Windows.Forms.Padding(8);
+            this.btnNorm.Name = "btnNorm";
+            this.btnNorm.TabIndex = 2;
+            this.btnNorm.Text = "متوسط";
+            this.btnNorm.UseVisualStyleBackColor = false;
+            this.btnNorm.Click += new System.EventHandler(this.btnNorm_Click);
+            // 
             // btnBad
             // 
-            this.btnBad.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBad.BackColor = System.Drawing.Color.Gold;
-            this.btnBad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(138)))), ((int)(((byte)(10)))));
+            this.btnBad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnBad.Font = new System.Drawing.Font("B Titr", 30F, System.Drawing.FontStyle.Bold);
             this.btnBad.ForeColor = System.Drawing.Color.White;
-            this.btnBad.Location = new System.Drawing.Point(249, 227);
+            this.btnBad.Margin = new System.Windows.Forms.Padding(8);
             this.btnBad.Name = "btnBad";
-            this.btnBad.Size = new System.Drawing.Size(238, 92);
             this.btnBad.TabIndex = 3;
             this.btnBad.Text = "بد";
             this.btnBad.UseVisualStyleBackColor = false;
@@ -148,14 +137,12 @@
             // 
             // btnVBad
             // 
-            this.btnVBad.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnVBad.BackColor = System.Drawing.Color.Red;
-            this.btnVBad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVBad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnVBad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnVBad.Font = new System.Drawing.Font("B Titr", 30F, System.Drawing.FontStyle.Bold);
             this.btnVBad.ForeColor = System.Drawing.Color.White;
-            this.btnVBad.Location = new System.Drawing.Point(3, 227);
+            this.btnVBad.Margin = new System.Windows.Forms.Padding(8);
             this.btnVBad.Name = "btnVBad";
-            this.btnVBad.Size = new System.Drawing.Size(240, 92);
             this.btnVBad.TabIndex = 17;
             this.btnVBad.Text = "خیلی بد";
             this.btnVBad.UseVisualStyleBackColor = false;
